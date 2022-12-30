@@ -10,18 +10,31 @@
     </head>
     <body>
         <div class="topbar">
-            <div class="logo">
-
-            </div>
+            <img src="logo4.png" alt="logo" width="500" height="600" id="logo">
 
         </div>
 
-        <div class="main">
+        <section class="main">
             <div class="result">
 
             </div>
 
             <div class="data">
+                <form class="form_ID">
+                    <fieldset class="fieldset">
+                        <legend class="header">Github +</legend>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" maxlength="255" pattern="[A-Za-z ]+" required>
+                        <br><br>
+                        <input type="radio" id="normal" name="search" value="normal">
+                        <label for="normal">Normal search</label><br>
+                        <input type="radio" id="detailed" name="gender" value="detailed">
+                        <label for="detailed">Detailed</label><br>
+                        <br>
+                        <button class="submit-button">submit</button><br>
+                        <!-- <button class="save button">save</button> -->
+                    </fieldset>
+                </form>
 
             </div>
 
