@@ -37,11 +37,6 @@ body {
     padding-top: 0%;
     margin-top: 3em;
     
-    
-    
-
-   
-    
 
 
 }
@@ -57,7 +52,7 @@ body {
     background-color: #0f2439;
 
     position: absolute;
-    margin-top: 13em;
+    margin-top: 12em;
     margin-left: -40%;
     border-radius: 4em;
     border: 0.15em;
@@ -73,7 +68,7 @@ body {
     max-width: 15%;
     background-color: #0f2439;
     position: absolute;
-    margin-top: 13em;
+    margin-top: 12em;
     margin-left: 10%;
     border-radius: 4em;
     border: 0.15em;
@@ -94,6 +89,7 @@ body {
 .fieldset {
     float: left;
     border-color: var(--primary-color);
+    background-color: #0f2439;
     margin-top: -7.2em;
     margin-left: -3.5em;
     border-radius: 2em;
@@ -108,5 +104,21 @@ body {
     color: white;
     border: 0em;
     border-radius: 0.3em;
+}
+
+
+.header {
+    position: relative;
+    color: white;
+    font-weight: 400;
+    font-size: 25px;
+    
+}
+
+
+.form_ID {
+    margin-top: -5em;
+    color: white;
+    font-size: 18px;
 }
 

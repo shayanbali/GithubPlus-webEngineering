@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="icon" type="image/png" href="logo4.png" />
         <title>Github+</title>
 
     </head>
@@ -15,30 +16,49 @@
         </div>
 
         <section class="main">
-            <div class="result">
+            <fieldset class="result">                
+                <legend class="header">Result</legend>
 
-            </div>
+                <div id="result-container">
 
-            <div class="data">
+                    <div class="upper-info">
+                      <div class="user-image"></div>
+                      <div class="user-name"></div>
+                      <div class="user-blog"></div>
+                      <div class="user-location"></div>
+                    </div>
+                    <div class = 'lower-info'>
+                      <div class = "user-bio"></div>
+                    </div>
+          
+                  </div>
+          
+
+
+            </fieldset>
+
+            <fieldset class="data">
+                <legend class="header">Github +</legend>
                 <form class="form_ID">
-                    <fieldset class="fieldset">
-                        <legend class="header">Github +</legend>
-                        <label for="name">Name</label>
-                        <input type="text" id="name" maxlength="255" pattern="[A-Za-z ]+" required>
-                        <br><br>
-                        <input type="radio" id="normal" name="search" value="normal">
-                        <label for="normal">Normal search</label><br>
-                        <input type="radio" id="detailed" name="gender" value="detailed">
-                        <label for="detailed">Detailed</label><br>
-                        <br>
-                        <button class="search-button">search</button><br>
-                        <!-- <button class="save button">save</button> -->
-                    </fieldset>
+                    <!-- <fieldset class="fieldset"> -->
+                    <label for="name">Name</label>
+                    <input type="text" id="name" maxlength="255" pattern="[A-Za-z ]+" required>
+                    <br><br>
+                    <input type="radio" id="normal" name="search" value="normal" checked>
+                    <label for="normal">Normal search</label><br>
+                    <input type="radio" id="detailed" name="search" value="detailed">
+                    <label for="detailed">Detailed</label><br>
+                    <br>
+                    <button class="search-button" onclick="clickSearchButton()">search</button><br>
+                    <!-- </fieldset> -->
                 </form>
 
-            </div>
+            </fieldset>
 
         </section>
+
+
+        <script src="./js/index.js"></script>
 
     </body>
 </html>
