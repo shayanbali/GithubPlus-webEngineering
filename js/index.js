@@ -1,7 +1,14 @@
+
+// flag of onCache (is result retrived from cache or no)
 let onCache = true
+
+// a flag for status of search. if this flag is True, we should retrive top lang
 let detailed = false
+
+// get radio button element
 let radio = document.querySelectorAll('input[name="search"]')
 
+// set functionality of search button
 async function searchButton() {
     onCache = true
     detailed = false
@@ -17,13 +24,13 @@ async function searchButton() {
     }
 
     
-
+    // get id from local storgae
     let request = await JSON.parse(window.localStorage.getItem(id))
     let obj = null
 
     
     
-
+    // if local storage doesn't have input ID ...
     if (request == null) {
         onCache = false
         
@@ -62,6 +69,7 @@ async function searchButton() {
         obj.name = "not existed"
     }
 
+    // set response message for user
     message =  
     "<input type='image' width='100px' height='100px' id='profilePhoto' src=" + obj.avatar_url + ">" +
     "<fieldset class='fieldset'> <legend> Request Status </legend> <p>" + "status : 200 OK" + "</p></fieldset>" +
@@ -71,7 +79,7 @@ async function searchButton() {
     "<fieldset class = 'fieldset'> <legend> Bio </legend> <p>" +   obj.bio + "</p> </fieldset>" +
     "<fieldset class = 'fieldset'> <legend> On cache </legend> <p>" +   onCache + "</p> </fieldset>";
 
-
+    // to retrive top language of user
     if (detailed) {
         message = message + await detailedSearch(id)
 
@@ -91,7 +99,7 @@ async function searchButton() {
 }
 
 
-
+// function to retrive top language of user
 async function detailedSearch(id) {
     let repos = await fetch("https://api.github.com/users/"+ id + "/repos?sort=pushed_at")
     repos = await repos.json()
@@ -114,13 +122,9 @@ async function detailedSearch(id) {
 
 }
 
-
+// On click function for search button
 async function clickSearchButton() {
     let result = document.getElementById("result-container")
     result.innerHTML = await searchButton()
 }
 
-
-function moveProfile() {
-    location.href = "www.google.com";
-}

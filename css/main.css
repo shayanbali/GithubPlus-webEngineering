@@ -1,19 +1,27 @@
+/* Import a font to our project */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700&display=swap');
 
-
+/* 
+    Set a variable as our primary color
+*/
 :root {
     --primary-color: #5a34a6;
 }
 
-
+/* 
+    Set our font and margin
+*/
 body {
-    background: white;
     margin: 0;
     font-family: 'Poppins';
     
-    /* background-image: url("../final.jpg"); */
+
     
 }
+
+/* 
+    Set topbar properties
+*/
 
 .topbar {
     background: #161B22;
@@ -24,15 +32,19 @@ body {
     width: 100%;
     top: 0;
 
-    /* background-image: url("../final.jpg"); */
-    /* display:inline-flexbox; */
 }
+
+/* 
+    Chnage opacity when hover on logo on topbar
+*/
 
 #logo:hover {
     opacity: 80%;
 }
 
-
+/* 
+    Main section : input data + result part
+*/
 .main {
     background-image: url("../final.jpg");
     background-size: cover;
@@ -47,11 +59,12 @@ body {
 }
 
 
-
+/* 
+    Set Result part attributes
+    Result shows result from git API
+*/
 .result {
-    /* float: left; */
-    /* padding: 10%; */
-    /* padding-left: 20%; */
+
     min-width: 40em;
     min-height: 35em;
     
@@ -70,6 +83,9 @@ body {
 }
 
 
+/* 
+    Attributes of input data part
+*/
 .data {
     float: left;
     padding: 7%;
@@ -86,7 +102,9 @@ body {
 }
 
 
-
+/* 
+    Set size of logo on topbar
+*/
 #logo {
     max-width: 30px;
     max-height: 30px;
@@ -95,6 +113,11 @@ body {
 }
 
 
+
+
+/* 
+    set fieldset class attributes
+ */
 .fieldset {
 
     padding: 0;
@@ -105,9 +128,13 @@ body {
     display: block;
     color: white;
     
-  }
+}
 
 
+  
+/* 
+    Set zie and color and radius of search button
+*/
 .search-button {
     width: 100%;
     background-color: var(--primary-color);
@@ -125,14 +152,18 @@ body {
     
 }
 
-
+/* 
+    form_ID class used for getting data from users
+*/
 .form_ID {
     margin-top: -5em;
     color: white;
     font-size: 18px;
 }
 
-
+/* 
+    Set attributes of profile photo of user that retrive from git API result
+*/
 #profilePhoto {
     margin-top: -50em;
     border-radius: 1em;
@@ -144,6 +175,10 @@ body {
     max-height: 6em;
 }
 
+
+/* 
+    Chnage opacity of profile photo when hover on it
+*/
 #profilePhoto:hover {
     opacity: 85%;
 }
