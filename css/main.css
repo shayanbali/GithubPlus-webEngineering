@@ -16,7 +16,7 @@ body {
 }
 
 .topbar {
-    background: #24292e;
+    background: #161B22;
     border: 0em;
     padding: 1em;
     max-height: 1.5em;
@@ -28,6 +28,10 @@ body {
     /* display:inline-flexbox; */
 }
 
+#logo:hover {
+    opacity: 80%;
+}
+
 
 .main {
     background-image: url("../final.jpg");
@@ -37,6 +41,7 @@ body {
     padding-top: 0%;
     margin-top: 3em;
     
+    
 
 
 }
@@ -45,30 +50,34 @@ body {
 
 .result {
     /* float: left; */
-    padding: 15%;
-    padding-left: 20%;
+    /* padding: 10%; */
+    /* padding-left: 20%; */
+    min-width: 40em;
+    min-height: 35em;
+    
     max-height: 15%;
     max-width: 15%;
     background-color: #0f2439;
 
     position: absolute;
-    margin-top: 12em;
-    margin-left: -40%;
+    margin-top: 12.8em;
+    margin-left: -45%;
     border-radius: 4em;
     border: 0.15em;
     border-style: solid;
     border-color: var(--primary-color);
+    display: none;
 }
 
 
 .data {
     float: left;
-    padding: 10%;
+    padding: 7%;
     max-height: 15%;
     max-width: 15%;
     background-color: #0f2439;
     position: absolute;
-    margin-top: 12em;
+    margin-top: 12.8em;
     margin-left: 10%;
     border-radius: 4em;
     border: 0.15em;
@@ -87,15 +96,16 @@ body {
 
 
 .fieldset {
-    float: left;
+
+    padding: 0;
+    border-radius: 10px;
+    min-width: 25em;
+    max-height: 4em;
     border-color: var(--primary-color);
-    background-color: #0f2439;
-    margin-top: -7.2em;
-    margin-left: -3.5em;
-    border-radius: 2em;
+    display: block;
     color: white;
-    padding: 40%;
-}
+    
+  }
 
 
 .search-button {
@@ -121,4 +131,25 @@ body {
     color: white;
     font-size: 18px;
 }
+
+
+#profilePhoto {
+    margin-top: -50em;
+    border-radius: 1em;
+    margin-left: 40em;
+    border: 0.2em;
+    border-style: solid;
+    border-color: var(--primary-color);
+    max-width: 6em;
+    max-height: 6em;
+}
+
+#profilePhoto:hover {
+    opacity: 85%;
+}
+
+
+
+
+
 

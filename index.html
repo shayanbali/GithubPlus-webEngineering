@@ -4,44 +4,46 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Set css stylesheet -->
         <link rel="stylesheet" href="css/main.css">
+        <!-- Set a phot as a icon -->
         <link rel="icon" type="image/png" href="logo4.png" />
         <title>Github+</title>
 
     </head>
     <body>
+
+
+        <!-- Make a topbar panel with github logo to refer  -->
         <div class="topbar">
-            <img src="logo4.png" alt="logo" width="500" height="600" id="logo">
+            <a href="https://github.com/" >
+                <img src="logo4.png" alt="logo" width="500" height="600" id="logo">
+            </a>
 
         </div>
 
         <section class="main">
-            <fieldset class="result">                
+
+            <!-- Show result part -->
+            <fieldset class="result" id="result">                
                 <legend class="header">Result</legend>
 
                 <div id="result-container">
 
-                    <div class="upper-info">
-                      <div class="user-image"></div>
-                      <div class="user-name"></div>
-                      <div class="user-blog"></div>
-                      <div class="user-location"></div>
-                    </div>
-                    <div class = 'lower-info'>
-                      <div class = "user-bio"></div>
-                    </div>
+                    
           
-                  </div>
+                </div>
           
 
 
             </fieldset>
 
+            <!-- Input data part -->
             <fieldset class="data">
                 <legend class="header">Github +</legend>
                 <form class="form_ID">
                     <!-- <fieldset class="fieldset"> -->
-                    <label for="name">Name</label>
+                    <label for="name">Git ID</label>
                     <input type="text" id="name" maxlength="255" pattern="[A-Za-z ]+" required>
                     <br><br>
                     <input type="radio" id="normal" name="search" value="normal" checked>
@@ -56,8 +58,9 @@
             </fieldset>
 
         </section>
+        
 
-
+        <!-- Set script file -->
         <script src="./js/index.js"></script>
 
     </body>

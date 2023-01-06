@@ -3,6 +3,8 @@ let detailed = false
 let radio = document.querySelectorAll('input[name="search"]')
 
 async function searchButton() {
+    onCache = true
+    detailed = false
     event.preventDefault()
     
     let message = ""
@@ -44,14 +46,31 @@ async function searchButton() {
     }
 
     
+    if (obj.bio == null) {
+        obj.bio = "not existed"
+    }
+
+    if (obj.location == null) {
+        obj.location = "not existed"
+    }
+
+    if (obj.blog.length == 0) {
+        obj.blog = "not existed"
+    }
+
+    if (obj.name == null) {
+        obj.name = "not existed"
+    }
 
     message =  
-    "<input type='image' width='100px' height='100px'  src=" + obj.avatar_url + ">" +
-    "<fieldset class='fieldset'> <legend> Status </legend> <p>" + "status : 200 OK" + "</p></fieldset>" +
+    "<input type='image' width='100px' height='100px' id='profilePhoto' src=" + obj.avatar_url + ">" +
+    "<fieldset class='fieldset'> <legend> Request Status </legend> <p>" + "status : 200 OK" + "</p></fieldset>" +
     "<fieldset class='fieldset'> <legend> Name </legend> <p>" + obj.name + "</p></fieldset>" +
     "<fieldset class='fieldset'> <legend> Blog </legend> <p>" + obj.blog + "</p></fieldset>" +
     "<fieldset class='fieldset'> <legend> Location </legend> <p>" + obj.location + "</p></fieldset>" +
-    "<fieldset class = 'fieldset'> <legend> Bio </legend> <span style='white-space: pre-wrap'> " + obj.bio + "</span> </fieldset>";
+    "<fieldset class = 'fieldset'> <legend> Bio </legend> <p>" +   obj.bio + "</p> </fieldset>" +
+    "<fieldset class = 'fieldset'> <legend> On cache </legend> <p>" +   onCache + "</p> </fieldset>";
+
 
     if (detailed) {
         message = message + await detailedSearch(id)
@@ -60,21 +79,14 @@ async function searchButton() {
 
     console.log(message)
 
+    message = message.replace("null", "not existed")
+    message.replace(null, "not existed")
+    document.getElementById('result').style.display = 'block'
+    
+
     return message
 
 
-
-    
-
-
-
-
-    
-    // fetch('api/sdjflsd').then(res => res.json()).then(res => {
-
-    // }).catch(err => {
-
-    // })
     
 }
 
@@ -106,4 +118,9 @@ async function detailedSearch(id) {
 async function clickSearchButton() {
     let result = document.getElementById("result-container")
     result.innerHTML = await searchButton()
+}
+
+
+function moveProfile() {
+    location.href = "www.google.com";
 }
