@@ -5,7 +5,14 @@ This is an API to get github's users data including:
 - Location
 - Bio
 - Favorite Language
- 
+\
+\
+\
+![index](https://user-images.githubusercontent.com/58389567/220192727-05310ae6-10b6-447c-905a-39d24fc90f24.jpg)
+
+
+
+
 # Design
 The design of this API was inspired by the main page of GitHub and i used the background of main page of github for the background of my webpage and 
 and i used a design similar to GitHub for the navigation bar.
@@ -19,6 +26,6 @@ If our API get data from cache, this field is set to the correct value.
 # Search Type RadioButton
 There is a radio button to select the type of search. There are two types of search:
 - Normal
--Detailed
+- Detailed
 
-the difference between these types of search is that you can see the favorite language of a specific user in detailed mode
+the difference between these types of search is that you can see the favorite language of a specific user in detailed mode.
